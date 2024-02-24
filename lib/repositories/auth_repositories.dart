@@ -1,8 +1,8 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../models/user_model.dart';
-import '../services/firebase_service.dart';
 
 class AuthRepository {
   CollectionReference<UserModel> userRef =
@@ -19,6 +19,7 @@ class AuthRepository {
       if (response.size != 0) {
         throw Exception("Username already exists");
       }
+     
       UserCredential uc = await FirebaseService.firebaseAuth
           .createUserWithEmailAndPassword(
               email: user.email!, password: user.password!);
@@ -67,9 +68,16 @@ class AuthRepository {
 
   Future<void> logout() async {
     try {
+     
       await FirebaseService.firebaseAuth.signOut();
     } catch (err) {
       rethrow;
     }
   }
+}
+
+mixin db {
+}
+
+class FirebaseService {
 }

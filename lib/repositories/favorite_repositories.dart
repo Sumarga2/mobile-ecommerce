@@ -1,9 +1,8 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import '../models/category_model.dart';
+
 import '../models/favorite_model.dart';
-import '../models/user_model.dart';
-import '../services/firebase_service.dart';
+import 'auth_repositories.dart';
 
 class FavoriteRepository {
   CollectionReference<FavoriteModel> favoriteRef =
