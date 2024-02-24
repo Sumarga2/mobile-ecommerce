@@ -1,6 +1,4 @@
-// To parse this JSON data, do
-//
-//     final favoriteModel = favoriteModelFromJson(jsonString);
+
 
 import 'dart:convert';
 

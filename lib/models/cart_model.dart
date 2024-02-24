@@ -1,5 +1,6 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce/models/product_model.dart';
+import 'package:ecommere/models/product_model.dart';
 
 class CartModel {
 
